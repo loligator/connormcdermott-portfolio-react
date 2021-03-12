@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import './App.css';
 
 import CmcdNavBar from './Components/cmcdNavBar';
-//import Gallery from './Components/Gallery';
+import Gallery from './Components/Gallery';
 import GamesListing from './Components/GamesListing';
 import Bio from './Components/Bio'
 import Footer from './Components/Footer';
@@ -14,6 +14,10 @@ import imgMadeInTheShade from './Image/MadeInTheShade.png';
 import { Descriptions, BioContent, Socials, CopyWrite } from './Constants';
 
 function App() {
+	let images = [
+		imgDualProcessors,
+		imgMadeInTheShade
+	]
 	let games = [
 		{
 			title: "Dual Processors",
@@ -42,7 +46,7 @@ function App() {
 					</h4>
 				</div>
 			</header>
-			{/*<Gallery images={images}/>*/}
+			<Gallery images={images}/>
 			<img src={games[0].image} className="coverImage" alt=""/>
 			<Bio content={BioContent}/>
 			<GamesListing games={games}/>

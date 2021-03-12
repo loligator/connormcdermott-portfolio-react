@@ -5,13 +5,12 @@ import Listing from './Listing';
 const GamesListing = (props) => {
 	let games = props.games;
 
-	let gameIndex = 0;
 	return (
 		<div className="games-listing">
 			{
-				games.map(g => (
+				games.map((g, index) => (
 					<>
-						<Listing game={g} index={gameIndex++}/>
+						<Listing game={g} index={index}/>
 					</>
 				))
 			}
